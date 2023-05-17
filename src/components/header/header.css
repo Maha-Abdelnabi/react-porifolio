@@ -1,0 +1,79 @@
+.header {
+  height: 100vh;
+  padding-top: 1rem;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: left;
+  height: 100%;
+  position: relative;
+}
+
+/*CTA*/
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: left;
+}
+
+/*header socials icons*/
+
+.header__socials {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+/*to make the icons in colomns*/
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/*me img*/
+.me {
+  width: 35rem;
+  height: 35rem;
+  position: absolute;
+  left: calc(50% - 15em);
+  top: 8rem;
+  overflow: hidden;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+ 
+}
+
+/*scroll down*/
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 8rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+/*media query for md devices*/
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
+}
+
+/*media query for sm devices*/
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+  .header__socials,
+  .scroll-down {
+    display: none;
+  }
+}
